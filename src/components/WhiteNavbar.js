@@ -14,10 +14,10 @@ import {
 
 function WhiteNavbar(props) {
   return (
-    <div className={cn("p-6")}>
+    <div className={cn("p-6 w-11/12")}>
       <div className={cn("flex justify-center items-center")}>
         <div className={cn("flex-shrink")}>
-          <FaMapMarkerAlt className={cn("text-blue-500 mt-2")} />
+          <FaMapMarkerAlt className={cn("text-blue-500 mt-2 text-3xl")} />
         </div>
         <div className={cn("flex-shrink")}>
           <p className={cn("font-bold text-3xl text-blue-900 pl-2")}>houzez</p>
