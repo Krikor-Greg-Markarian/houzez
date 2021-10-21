@@ -4,13 +4,21 @@ import BlueNavbar from "../src/components/BlueNavbar";
 import WhiteNavbar from "../src/components/WhiteNavbar";
 import HouzezCard from "../src/components/HouzezCard";
 import axios from "axios";
-import Swiper from "swiper";
-import Button from "../src/components/Button";
 import Footer from "../src/components/Footer";
 import Cities from "../src/components/Cities";
-import Agents from "../src/components/Agents";
+import Agent from "../src/components/Agent";
+import Realestate from "../src/components/Realestate";
+import FeaturedListingsitem from "../src/components/FeaturedListingsitem";
+import HouseRentBuySwiper from "../src/components/HouseRentBuySwiper";
+import LifeStyle from "../src/components/LifeStyle";
 
-export default function Home({ houzez, cities, agents }) {
+export default function Home({
+  houzez,
+  cities,
+  agent,
+  featuredListingsItems,
+  lifestyle,
+}) {
   return (
     <div className={cn("bg-white")}>
       <section>
@@ -76,13 +84,13 @@ export default function Home({ houzez, cities, agents }) {
       </section>
 
       <section className={cn("pt-2")}>
-        <div className={cn("bg-gray-100")}>
+        <div className={cn("bg-gray-100 py-12")}>
           <p className={cn("text-3xl text-center")}>Welcome To Houzez</p>
           <p className={cn("text-gray-500 text-center pt-4")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
 
-          <div className={cn("flex justify-center items-center pt-12")}>
+          <div className={cn("flex justify-center items-center pt-12 py-12")}>
             <div className={cn("grid md:grid-cols-3 gap-10 w-7/12")}>
               {houzez.map((item, idx) => (
                 <div key={idx} className={cn("col-span-1")}>
@@ -99,204 +107,60 @@ export default function Home({ houzez, cities, agents }) {
       </section>
 
       <section>
-        <div className={cn("bg-gray-100")}>
-          <p className={cn("text-3xl text-center")}>
+        <div className={cn("bg-white py-12")}>
+          <p className={cn("text-3xl text-center ")}>
             Check Our Featured Listings
           </p>
-          <p className={cn("text-gray-500 text-center")}>
+          <p className={cn("text-gray-500 pt-4 text-center")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
-
-          <div className={cn("flex justify-center items-center")}></div>
         </div>
+        <HouseRentBuySwiper featuredListingsItems={featuredListingsItems} />
       </section>
 
       <section>
-        <div className={cn("bg-blue-900 py-32 ")}>
-          <div className={cn("grid grid-cols-2")}>
-            <div className={cn("col-span-1")}>
-              <div className={cn("grid grid-cols-2")}>
-                <div className={cn("cols-span-1 p-24 mt-80")}>
-                  <p className={cn("text-white text-3xl pb-12")}>
-                    Why Houzez Is The Perfect Choice?
-                  </p>
-                  <hr className={cn("w-4/12 pb-4")} />
-                  <p className={cn("text-white text-3xl")}>01.</p>
-                  <p className={cn("text-white text-2xl pt-2")}>
-                    Perfect Solution For Designers And Agents
-                  </p>
-                  <p className={cn("text-gray-500 text-sm pb-12 pt-4")}>
-                    Never miss a sale! It's never been easier to turn leads into
-                    real customers
-                  </p>
-                  <hr className={cn("w-4/12")} />
-                </div>
-                <div className={cn("col-span-1 w-8/12 mt-80")}>
-                  <p className={cn("text-white text-3xl")}>02.</p>
-                  <p className={cn("text-white text-2xl pt-2")}>
-                    Design Custom Leads Capture Forms
-                  </p>
-                  <p className={cn("text-gray-500 text-sm pb-12 pt-4")}>
-                    Someone asked a question? Get back to them right away
-                  </p>
-                  <hr className={cn("w-4/12")} />
-                  <div className={cn("col-span-1 pt-5 w-11/12")}>
-                    <p className={cn("text-white text-3xl")}>03.</p>
-                    <p className={cn("text-white text-2xl pt-2")}>
-                      Customer Relationship Management
-                    </p>
-                    <p className={cn("text-gray-500 text-sm pb-12 pt-4")}>
-                      Keep track of your leads without having to pay for an
-                      external CRM
-                    </p>
-                    <hr className={cn("w-4/12")} />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={cn("bg-white w-6/12 p-6 mb-10 py-40 ")}>
-              <p className={cn("text-lg font-bold text-center")}>
-                Real Estate Inquiry Form
-              </p>
-              <p className={cn("text-gray-500 text-center")}>
-                Design custom lead capture forms that integrate with the Houzez
-                CRM
-              </p>
-
-              <p className={cn("pt-3 text-center")}>inquiry Type</p>
-
-              <div className={cn("flex justify-center items-center")}>
-                <input
-                  className={cn("border-2 p-1 border-gray-100 w-8/12")}
-                  placeholder="Select"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </div>
-
-              <p className={cn("pt-3 text-center")}>information</p>
-              <div className={cn("flex justify-center items-center")}>
-                <input
-                  className={cn("border-2 p-1 border-gray-100 mb-1 w-8/12")}
-                  placeholder="I'm a"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </div>
-              <div className={cn("flex justify-center items-center")}>
-                <input
-                  className={cn("border-2 p-1 border-gray-100 mb-1 w-4/12")}
-                  placeholder="First Name"
-                  type="text"
-                  name=""
-                  id=""
-                />
-                <input
-                  className={cn("border-2 p-1 border-gray-100 ml-1 w-4/12")}
-                  placeholder="Last Name"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </div>
-              <div className={cn("flex justify-center items-center")}>
-                <input
-                  className={cn("border-2 p-1 border-gray-100 w-8/12")}
-                  placeholder="Email Address"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </div>
-              <p className={cn("text-center")}>Location</p>
-              <div className={cn("flex justify-center items-center")}>
-                <input
-                  className={cn("border-2 p-1 border-gray-100  w-4/12")}
-                  placeholder="Select City"
-                  type="text"
-                  name=""
-                  id=""
-                />
-                <input
-                  className={cn("border-2 p-1 border-gray-100 ml-1 w-4/12")}
-                  placeholder="Zip Code"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </div>
-              <p className={cn("text-center")}>Property</p>
-              <div className={cn("flex justify-center items-center")}>
-                <input
-                  className={cn("border-2 p-1 border-gray-100 mb-1 w-8/12")}
-                  placeholder="Select type"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </div>
-              <div>
-                <div className={cn("flex justify-center items-center")}>
-                  <input
-                    className={cn("border-2 p-1 border-gray-100 w-4/12")}
-                    placeholder="Max Price"
-                    type="text"
-                    name=""
-                    id=""
-                  />
-                  <input
-                    className={cn(
-                      "border-2 p-1 border-gray-100 ml-1 mb-1 w-4/12"
-                    )}
-                    placeholder="Minimum Size(Sq Ft)"
-                    type="text"
-                    name=""
-                    id=""
-                  />
-                </div>
-              </div>
-              <div>
-                <div className={cn("flex justify-center items-center")}>
-                  <input
-                    className={cn("border-2 p-1 border-gray-100 w-4/12")}
-                    placeholder="Number of Beds"
-                    type="text"
-                    name=""
-                    id=""
-                  />
-                  <input
-                    className={cn("border-2 p-1 border-gray-100 ml-1 w-4/12")}
-                    placeholder="Number Of baths"
-                    type="text"
-                    name=""
-                    id=""
-                  />
-                </div>
-              </div>
-
-              <div className={cn("flex justify-center items-center mt-2")}>
-                <Button
-                  className={cn(
-                    "bg-blue-500 p-2 text-white text-center px-28 rounded"
-                  )}
-                  buttonName={"Submit"}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Realestate />
       </section>
 
       <section>
-        <div className={cn("bg-gray-100")}>
+        <div className={cn("bg-gray-100 py-12")}>
           <p className={cn("text-3xl text-center")}>Explore Lifestyles</p>
-          <p className={cn("text-gray-500 text-center")}>
+          <p className={cn("text-gray-500 pt-4 text-center py-12")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
 
-          <div className={cn("flex justify-center items-center")}></div>
+          <LifeStyle
+            apartmentImageUrL={
+              "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923__480.jpg"
+            }
+            apartment={"Apartment"}
+            properties={"17 PROPERTIES"}
+            singleImageUrl={
+              "https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060__340.jpg"
+            }
+            single={"Single Family Home"}
+            secondProperties={"12 PROPERTIES"}
+            studioImageUrl={
+              "https://cdn.pixabay.com/photo/2014/08/11/21/40/bedroom-416062__340.jpg"
+            }
+            studio={"Studio"}
+            thirdProperties={"7 PROPERTIES"}
+            officeImageUrl={
+              "https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376__340.jpg"
+            }
+            office={"Office"}
+            forthProperties={"3 PROPERTIES"}
+            shopImageUrl={
+              "https://cdn.pixabay.com/photo/2018/08/15/20/53/bathtub-3609070__340.jpg"
+            }
+            shop={"Shop"}
+            fifthProperties={"3 PROPERTIES"}
+            villaImageUrl={
+              "https://cdn.pixabay.com/photo/2018/01/26/08/15/dining-room-3108037__340.jpg"
+            }
+            villa={"Villa"}
+            sixthProperties={"10 PROPERTIES"}
+          />
         </div>
       </section>
 
@@ -333,42 +197,18 @@ export default function Home({ houzez, cities, agents }) {
         </div>
       </section>
 
-      {/* <section>
-        <div className={cn("p-8")}>
-          <p className={cn("text-3xl text-center")}>Explore Cities</p>
-          <p className={cn("text-gray-500 pt-4 text-center")}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing
-          </p>
-          <div className={cn("flex justify-center items-center py-24")}>
-            <div className={cn("grid grid-cols-4 gap-4")}>
-              {agents.map((item, idx) => (
-                <div key={idx} className={cn("col-span-1")}>
-                  <Agents
-                    
-                    imageUrl={item.imageUrl}
-                    title={item.title}
-                    description={item.description}
-                    text={item.text}
-                    ViewButton={item.ViewButton}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <section>
-        <div className={cn("bg-gray-100")}>
+      <section className={cn("pt-2")}>
+        <div className={cn("bg-gray-100 py-10 pb-16")}>
           <p className={cn("text-3xl text-center")}>Get In Touch With Us</p>
-          <p className={cn("text-gray-500 text-center")}>
+          <p className={cn("text-gray-500 text-center pt-4")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
-          <div className={cn("flex justify-center")}>
-            <div className={cn("grid grid-cols-4")}>
-              {agents.map((item, idx) => (
-                <div key={idx} className={cn("col-span-1")}>
-                  <Agents
+
+          <div className={cn("flex justify-center items-center pt-12")}>
+            <div className={cn("grid md:grid-cols-4 w-7/12")}>
+              {agent.map((item, idx) => (
+                <div className={cn("col-span-1")}>
+                  <Agent
                     imageUrl={item.imageUrl}
                     title={item.title}
                     description={item.description}
@@ -384,7 +224,7 @@ export default function Home({ houzez, cities, agents }) {
 
       <section className={cn("bg-white py-6")}>
         <div className={cn("flex justify-center items-center")}>
-          <div className={cn("grid grid-cols-5 gap-16")}>
+          <div className={cn("grid grid-cols-5 w-7/12")}>
             <div className={cn("col-span-1")}>
               <img
                 src="https://432351-1355223-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2016/03/partner-01-e1582734705113.jpg"
@@ -434,15 +274,25 @@ export async function getServerSideProps(context) {
   const citiesResponse = await axios.get(
     "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/cities"
   );
-  const agentsResponse = await axios.get(
-    "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/agents"
+
+  const agentResponse = await axios.get(
+    "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/agent"
+  );
+
+  const featuredListingsItemResponse = await axios.get(
+    "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/featuredListingsItem"
+  );
+  const lifestyleResponse = await axios.get(
+    "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/lifestyle"
   );
 
   return {
     props: {
       houzez: houzezResponse.data,
       cities: citiesResponse.data,
-      agents: agentsResponse.data,
+      agent: agentResponse.data,
+      featuredListingsItems: featuredListingsItemResponse.data,
+      lifestyle: lifestyleResponse.data,
     }, // will be passed to the page component as props
   };
 }
