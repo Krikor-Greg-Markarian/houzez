@@ -28,7 +28,7 @@ function WhiteNavbar(props) {
           </div>
           <div className={cn("flex-shrink ml-3")}>
             <p className={cn("font-bold text-blue-900")}>1 800 987 6543</p>
-            <p>info@houzez.com</p>
+            <p className={cn("text-blue-800")}>info@houzez.com</p>
           </div>
           <div className={cn("flex-shrink")}></div>
         </div>
@@ -38,7 +38,7 @@ function WhiteNavbar(props) {
           </div>
           <div className={cn("flex-shrink ml-3")}>
             <p className={cn("font-bold text-blue-900")}>Oceanview Hall</p>
-            <p>Miami, FL 33141</p>
+            <p className={cn("text-blue-800")}>Miami, FL 33141</p>
           </div>
           <div className={cn("flex-shrink")}></div>
         </div>
@@ -48,7 +48,7 @@ function WhiteNavbar(props) {
           </div>
           <div className={cn("flex-shrink ml-3")}>
             <p className={cn("font-bold text-blue-900")}>9 am to 6 pm</p>
-            <p>Monday to Friday</p>
+            <p className={cn("text-blue-800")}>Monday to Friday</p>
           </div>
           <div className={cn("flex-shrink")}></div>
         </div>
