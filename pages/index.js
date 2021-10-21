@@ -123,7 +123,7 @@ export default function Home({
       </section>
 
       <section>
-        <div className={cn("bg-gray-100 py-12")}>
+        <div className={cn("bg-white py-12")}>
           <p className={cn("text-3xl text-center")}>Explore Lifestyles</p>
           <p className={cn("text-gray-500 pt-4 text-center py-12")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
