@@ -20,11 +20,11 @@ export default ({ featuredListingsItems }) => {
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      <SwiperSlide>
+      <SwiperSlide className={cn("py-16")}>
         <div className={cn("flex justify-center items-center")}>
           {featuredListingsItems.map((item, idx) => (
             <FeaturedListingsitem
