@@ -9,9 +9,9 @@ import { FaHeart, FaPlusCircle, FaExpandAlt } from "react-icons/fa";
 
 function FeaturedListingsitem(props) {
   return (
-    <div className={cn("border-2")}>
+    <div className={cn("border-2 w-full")}>
       <div
-        className={cn("relative w-96 h-60 rounded-t")}
+        className={cn("relative w-full h-64 rounded-t")}
         style={{
           backgroundImage: `url(${props.imageUrl})`,
         }}
@@ -35,9 +35,22 @@ function FeaturedListingsitem(props) {
           </p>
         ) : null}
 
-        <p className={cn("absolute text-white bottom-3 font-bold  left-3")}>
+        <p
+          className={cn("absolute text-white bottom-3 pb-8 font-bold  left-3")}
+        >
           {props.price}
         </p>
+
+        {props.isVisible ? (
+          <p
+            className={cn(
+              "absolute text-white bottom-1 pb-5 font-bold text-xs left-3"
+            )}
+          >
+            {props.perSquarPrice}
+          </p>
+        ) : null}
+
         <div className={cn("absolute bottom-5 right-5")}>
           <div
             className={cn(
