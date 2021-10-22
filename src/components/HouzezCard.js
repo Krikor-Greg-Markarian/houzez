@@ -4,11 +4,11 @@ import styles from "../../styles/card.module.css";
 
 function HouzezCard(props) {
   return (
-    <div className={cn("p-12", styles.mainContainer, props.className)}>
+    <div className={cn("p-8", styles.mainContainer, props.className)}>
       {props.children}
       <img
         className={cn(
-          "w-full    transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-90   "
+          "w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-90   "
         )}
         src={props.imageUrl}
         alt="Renting image"
