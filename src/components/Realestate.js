@@ -4,8 +4,8 @@ import Button from "./Button";
 
 function Realestate(props) {
   return (
-    <div>
-      <div className={cn("bg-blue-900 py-32")}>
+    <div className={cn("blueOpacityBackground")}>
+      <div className={cn("bg-blue-900 opacity-95 py-32")}>
         <div className={cn("grid md:grid-cols-2")}>
           <div className={cn("col-span-1")}>
             <div className={cn("grid md:grid-cols-2")}>
