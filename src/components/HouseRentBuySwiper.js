@@ -14,9 +14,10 @@ import cn from "classnames";
 export default ({ featuredListingsItems }) => {
   return (
     <Swiper
+      className={cn("w-7/12")}
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={10}
+      spaceBetween={20}
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
@@ -24,32 +25,29 @@ export default ({ featuredListingsItems }) => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      <SwiperSlide className={cn("py-16")}>
-        <div className={cn("flex justify-center items-center")}>
-          {featuredListingsItems.map((item, idx) => (
-            <FeaturedListingsitem
-              key={idx}
-              imageUrl={item.imageUrl}
-              featureIsSelected={item.featureIsSelected}
-              featured={item.featured}
-              rentIsSelected={item.rentIsSelected}
-              forRent={item.forRent}
-              price={item.price}
-              title={item.title}
-              location={item.location}
-              numberOfBedroom={item.numberOfBedroom}
-              bedrooms={item.bedrooms}
-              numberOfBathroom={item.numberOfBathroom}
-              bathroom={item.bathroom}
-              spaceMeters={item.spaceMeters}
-              space={item.space}
-            />
-          ))}
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      {featuredListingsItems.map((item, idx) => (
+        <SwiperSlide className={cn("py-16 flex justify-center items-center")}>
+          <FeaturedListingsitem
+            key={idx}
+            imageUrl={item.imageUrl}
+            featureIsSelected={item.featureIsSelected}
+            featured={item.featured}
+            rentIsSelected={item.rentIsSelected}
+            forRent={item.forRent}
+            price={item.price}
+            isVisible={item.isVisible}
+            perSquarPrice={item.perSquarPrice}
+            title={item.title}
+            location={item.location}
+            numberOfBedroom={item.numberOfBedroom}
+            bedrooms={item.bedrooms}
+            numberOfBathroom={item.numberOfBathroom}
+            bathroom={item.bathroom}
+            spaceMeters={item.spaceMeters}
+            space={item.space}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
