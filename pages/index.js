@@ -34,9 +34,9 @@ export default function Home({
       </section>
 
       <section className={cn("flex justify-center ")}>
-        <div>
+        <div className={cn("p-2")}>
           <input
-            className={cn("px-56 p-2 inline")}
+            className={cn("px-56 p-1.5 inline border-2")}
             placeholder="Enter Keyword..."
             type="text"
             name=""
@@ -86,7 +86,7 @@ export default function Home({
       <section className={cn("pt-2")}>
         <div className={cn("bg-gray-100 py-12")}>
           <p className={cn("text-3xl text-center")}>Welcome To Houzez</p>
-          <p className={cn("text-gray-500 text-center pt-4")}>
+          <p className={cn("text-gray-500 text-center pt-2")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
 
@@ -165,13 +165,15 @@ export default function Home({
       </section>
 
       <section>
-        <div className={cn("bg-gray-100")}>
+        <div className={cn("bg-gray-100 py-12")}>
           <p className={cn("text-3xl text-center")}>Properties For Sale</p>
           <p className={cn("text-gray-500 text-center")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
 
-          <div className={cn("flex justify-center items-center")}></div>
+          <div className={cn("py-18")}>
+            <HouseRentBuySwiper featuredListingsItems={featuredListingsItems} />
+          </div>
         </div>
       </section>
 
@@ -182,7 +184,7 @@ export default function Home({
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
           <div className={cn("flex justify-center items-center py-24")}>
-            <div className={cn("grid grid-cols-4 gap-4")}>
+            <div className={cn("grid md:grid-cols-4 gap-4")}>
               {cities.map((item, idx) => (
                 <div key={idx} className={cn("col-span-1")}>
                   <Cities
@@ -198,7 +200,7 @@ export default function Home({
       </section>
 
       <section className={cn("pt-2")}>
-        <div className={cn("bg-gray-100 py-10 pb-16")}>
+        <div className={cn("bg-gray-100 py-10 pb-20")}>
           <p className={cn("text-3xl text-center")}>Get In Touch With Us</p>
           <p className={cn("text-gray-500 text-center pt-4")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -207,7 +209,7 @@ export default function Home({
           <div className={cn("flex justify-center items-center pt-12")}>
             <div className={cn("grid md:grid-cols-4 w-7/12")}>
               {agent.map((item, idx) => (
-                <div className={cn("col-span-1")}>
+                <div key={idx} className={cn("col-span-1")}>
                   <Agent
                     imageUrl={item.imageUrl}
                     title={item.title}
@@ -224,7 +226,7 @@ export default function Home({
 
       <section className={cn("bg-white py-6")}>
         <div className={cn("flex justify-center items-center")}>
-          <div className={cn("grid grid-cols-5 w-7/12")}>
+          <div className={cn("grid md:grid-cols-5 w-7/12")}>
             <div className={cn("col-span-1")}>
               <img
                 src="https://432351-1355223-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2016/03/partner-01-e1582734705113.jpg"
@@ -282,9 +284,6 @@ export async function getServerSideProps(context) {
   const featuredListingsItemResponse = await axios.get(
     "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/featuredListingsItem"
   );
-  const lifestyleResponse = await axios.get(
-    "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/lifestyle"
-  );
 
   return {
     props: {
@@ -292,7 +291,6 @@ export async function getServerSideProps(context) {
       cities: citiesResponse.data,
       agent: agentResponse.data,
       featuredListingsItems: featuredListingsItemResponse.data,
-      lifestyle: lifestyleResponse.data,
     }, // will be passed to the page component as props
   };
 }
