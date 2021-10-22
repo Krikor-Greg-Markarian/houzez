@@ -25,7 +25,7 @@ function Footer(props) {
       <div className={cn("bg-blue-800 ")}>
         <div className={cn("container mx-auto")}>
           <div className={cn("w-11/12 p-20")}>
-            <div className={cn("grid grid-cols-6")}>
+            <div className={cn("grid md:grid-cols-6")}>
               <div className={cn("col-span-2")}>
                 <p className={cn("pb-6 text-white")}>Discover</p>
                 <li className={cn("text-white text-sm list-none")}>
@@ -107,7 +107,7 @@ function Footer(props) {
                   </div>
                 </div>
               </div>
-              <div className={cn("col-span-3 ml-40")}>
+              <div className={cn("col-span-3 ml-40 sm:ml-2 md:ml-0")}>
                 <p className={cn("pb-6 text-white")}>Newsletter</p>
 
                 <div className={cn("flex")}>
