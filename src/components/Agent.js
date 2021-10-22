@@ -8,11 +8,13 @@ function Agent(props) {
         "p-12 bg-white border-r-2 border-gray-50 hover:transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl"
       )}
     >
+      <div className = {cn("flex justify-center items-center")}>
       <img
         className={cn("rounded-full cursor-pointer")}
         src={props.imageUrl}
         alt=""
       />
+      </div>
       <p className={cn("text-blue-600 text-center pt-4 cursor-pointer")}>
         {props.title}
       </p>
