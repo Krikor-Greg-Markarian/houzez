@@ -3,17 +3,19 @@ import cn from "classnames";
 
 function LifeStyle(props) {
   return (
-    <div>
+    <div className= {cn("pb-20")}>
       <div className={cn("flex justify-center items-center")}>
-        <div className={cn("grid grid-cols-4 gap-8 w-7/12")}>
+        <div className={cn("grid md:grid-cols-4 gap-8 w-7/12")}>
           <div className={cn("col-span-2")}>
             <div
-              className={cn("w-full h-60 cursor-pointer opacity-80 hover:opacity-100")}
+              className={cn(
+                "w-full h-60 cursor-pointer opacity-80 hover:opacity-100"
+              )}
               style={{ backgroundImage: `url(${props.apartmentImageUrL})` }}
             >
               <p
                 className={cn(
-                  "text-center text-white font-bold transform translate-y-24 "
+                  "text-center text-white font-bold text-lg transform translate-y-24 "
                 )}
               >
                 {props.apartment}
@@ -29,12 +31,14 @@ function LifeStyle(props) {
           </div>
           <div className={cn("col-span-1")}>
             <div
-              className={cn("w-full h-60 cursor-pointer opacity-80 hover:opacity-100")}
+              className={cn(
+                "w-full h-60 cursor-pointer opacity-80 hover:opacity-100"
+              )}
               style={{ backgroundImage: `url(${props.singleImageUrl})` }}
             >
               <p
                 className={cn(
-                  "text-center text-white font-bold transform translate-y-24"
+                  "text-center text-white font-bold text-lg transform translate-y-24"
                 )}
               >
                 {props.single}
@@ -50,12 +54,14 @@ function LifeStyle(props) {
           </div>
           <div className={cn("col-span-1")}>
             <div
-              className={cn("w-full h-60 cursor-pointer opacity-80 hover:opacity-100")}
+              className={cn(
+                "w-full h-60 cursor-pointer opacity-80 hover:opacity-100"
+              )}
               style={{ backgroundImage: `url(${props.studioImageUrl})` }}
             >
               <p
                 className={cn(
-                  "text-center text-white font-bold transform translate-y-24"
+                  "text-center text-white font-bold text-lg transform translate-y-24"
                 )}
               >
                 {props.studio}
@@ -71,12 +77,14 @@ function LifeStyle(props) {
           </div>
           <div className={cn("col-span-1")}>
             <div
-              className={cn("w-full h-60 cursor-pointer opacity-80 hover:opacity-100")}
+              className={cn(
+                "w-full h-60 cursor-pointer opacity-80 hover:opacity-100"
+              )}
               style={{ backgroundImage: `url(${props.officeImageUrl})` }}
             >
               <p
                 className={cn(
-                  "text-center text-white font-bold transform translate-y-24"
+                  "text-center text-white font-bold text-lg transform translate-y-24"
                 )}
               >
                 {props.office}
@@ -92,12 +100,14 @@ function LifeStyle(props) {
           </div>
           <div className={cn("col-span-1")}>
             <div
-              className={cn("w-full h-60 cursor-pointer opacity-80 hover:opacity-100")}
+              className={cn(
+                "w-full h-60 cursor-pointer opacity-80 hover:opacity-100"
+              )}
               style={{ backgroundImage: `url(${props.shopImageUrl})` }}
             >
               <p
                 className={cn(
-                  "text-center text-white font-bold transform translate-y-24"
+                  "text-center text-white font-bold text-lg transform translate-y-24"
                 )}
               >
                 {props.shop}
@@ -113,12 +123,14 @@ function LifeStyle(props) {
           </div>
           <div className={cn("col-span-2")}>
             <div
-              className={cn("w-full h-60 cursor-pointer opacity-80 hover:opacity-100")}
+              className={cn(
+                "w-full h-60 cursor-pointer opacity-80 hover:opacity-100"
+              )}
               style={{ backgroundImage: `url(${props.villaImageUrl})` }}
             >
               <p
                 className={cn(
-                  "text-center text-white font-bold transform translate-y-24"
+                  "text-center text-white font-bold text-lg transform translate-y-24"
                 )}
               >
                 {props.villa}
