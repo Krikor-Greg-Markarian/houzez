@@ -9,7 +9,7 @@ import { FaHeart, FaPlusCircle, FaExpandAlt } from "react-icons/fa";
 
 function FeaturedListingsitem(props) {
   return (
-    <div className={cn("border-2 w-full")}>
+    <div className={cn("border-2 rounded w-full")}>
       <div
         className={cn("relative w-full h-64 rounded-t")}
         style={{
