@@ -2,7 +2,6 @@ import React from "react";
 import cn from "classnames";
 import Link from "next/link";
 import Button from "./Button";
-import { FaAngleDown } from "react-icons/fa";
 
 function BlueNavbar(props) {
   return (
