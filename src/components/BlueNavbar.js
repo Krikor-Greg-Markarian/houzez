@@ -104,7 +104,7 @@ function BlueNavbar(props) {
               className={cn(
                 "bg-blue-400 py-3 px-4 text-center rounded text-white text-sm font-bold"
               )}
-              buttonName={"Create a listing"}
+              buttonName={"Create a Listing"}
             />
           </div>
         </div>
