@@ -93,7 +93,7 @@ export default function Home({ gridfullwidth }) {
               </div>
               <div>
                 <div className={cn("grid grid-cols-4 gap-6")}>
-                  {gridfullwidth.map((item, idx) => (
+                  {gridfullwidth.data.map((item, idx) => (
                     <div className={cn("col-span-1")}>
                       <GridFullWidth
                         key={idx}
