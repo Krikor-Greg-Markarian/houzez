@@ -19,7 +19,7 @@ function ContemporaryApartment(props) {
         <div className={cn("flex")}>
           <div className={cn("flex-shrink")}>
             <MdBed className={cn("inline")} />
-            <p className={cn("inline")}>{props.MdBed}</p>
+            <p className={cn("inline pl-1")}>{props.MdBed}</p>
           </div>
           <div className={cn("flex-shrink pl-2")}>
             <MdOutlineWaterDrop className={cn("inline")} />
