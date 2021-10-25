@@ -23,32 +23,22 @@ export default ({ featuredListingsItems }) => {
       onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide>
-        <img
-          className={cn("w-full h-96 min-h-full")}
-          src="https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756__340.jpg"
-          alt=""
-        />
+        
+        <div className={cn("kitchen")}>
+          
+        </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img
-          className={cn("w-full h-96 min-h-full")}
-          src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg"
-          alt=""
-        />
+        
+        <div className={cn("kitchen2")}>
+          
+        </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img
-          className={cn("w-full h-96 min-h-full")}
-          src="https://cdn.pixabay.com/photo/2016/04/18/08/50/kitchen-1336160__340.jpg"
-          alt=""
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          className={cn("w-full h-96 min-h-full")}
-          src="https://cdn.pixabay.com/photo/2019/06/08/21/32/castle-4261029__340.jpg"
-          alt=""
-        />
+        
+        <div className={cn("kitchen3")}>
+          
+        </div>
       </SwiperSlide>
     </Swiper>
   );
