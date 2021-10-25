@@ -25,7 +25,7 @@ export default ({ featuredListingsItems }) => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      {featuredListingsItems.data.map((item, idx) => (
+      {featuredListingsItems.map((item, idx) => (
         <SwiperSlide className={cn("py-16 flex justify-center items-center")}>
           <FeaturedListingsitem
             key={idx}
