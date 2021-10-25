@@ -95,7 +95,7 @@ export default function Home({
 
           <div className={cn("flex justify-center items-center pt-12 py-12")}>
             <div className={cn("grid md:grid-cols-3 gap-10 w-7/12")}>
-              {houzez.map((item, idx) => (
+              {houzez.data.map((item, idx) => (
                 <div key={idx} className={cn("col-span-1")}>
                   <HouzezCard
                     imageUrl={item.imageUrl}
@@ -118,6 +118,7 @@ export default function Home({
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
         </div>
+
         <HouseRentBuySwiper featuredListingsItems={featuredListingsItems} />
       </section>
 
@@ -188,7 +189,7 @@ export default function Home({
           </p>
           <div className={cn("flex justify-center items-center py-24")}>
             <div className={cn("grid md:grid-cols-4 gap-4")}>
-              {cities.map((item, idx) => (
+              {cities.data.map((item, idx) => (
                 <div key={idx} className={cn("col-span-1")}>
                   <Cities
                     imageUrl={item.imageUrl}
@@ -211,7 +212,7 @@ export default function Home({
 
           <div className={cn("flex justify-center items-center pt-12")}>
             <div className={cn("grid md:grid-cols-4 w-7/12")}>
-              {agent.map((item, idx) => (
+              {agent.data.map((item, idx) => (
                 <div key={idx} className={cn("col-span-1")}>
                   <Agent
                     imageUrl={item.imageUrl}
