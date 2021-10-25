@@ -8,7 +8,6 @@ import Footer from "../src/components/Footer";
 import Cities from "../src/components/Cities";
 import Agent from "../src/components/Agent";
 import Realestate from "../src/components/Realestate";
-import FeaturedListingsitem from "../src/components/FeaturedListingsitem";
 import HouseRentBuySwiper from "../src/components/HouseRentBuySwiper";
 import LifeStyle from "../src/components/LifeStyle";
 
