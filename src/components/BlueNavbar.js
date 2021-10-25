@@ -2,6 +2,7 @@ import React from "react";
 import cn from "classnames";
 import Link from "next/link";
 import Button from "./Button";
+import { FaAngleDown } from "react-icons/fa";
 
 function BlueNavbar(props) {
   return (
@@ -22,6 +23,7 @@ function BlueNavbar(props) {
               </a>
             </Link>
           </li>
+
           <li
             className={cn(
               "text-white list-none pl-3 inline hover:text-blue-300"
