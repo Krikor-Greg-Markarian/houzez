@@ -93,7 +93,7 @@ export default function Home({ gridfullwidth }) {
               </div>
               <div>
                 <div className={cn("grid grid-cols-4 gap-6")}>
-                  {gridfullwidth.data.map((item, idx) => (
+                  {gridfullwidth.map((item, idx) => (
                     <div className={cn("col-span-1")}>
                       <GridFullWidth
                         key={idx}
@@ -135,9 +135,11 @@ export async function getServerSideProps(context) {
     "https://ea50086b-af54-4718-ab27-001ee37d4e28.mock.pstmn.io/gridfullwidth"
   );
 
+  const gridfullwidth = gridfullwidthResponse.data.data || [];
+
   return {
     props: {
-      gridfullwidth: gridfullwidthResponse.data,
+      gridfullwidth: gridfullwidth,
     }, // will be passed to the page component as props
   };
 }
