@@ -5,7 +5,6 @@ import WhiteNavbar from "../src/components/WhiteNavbar";
 import axios from "axios";
 import Footer from "../src/components/Footer";
 import { FaAngleRight } from "react-icons/fa";
-import FeaturedListingsitem from "../src/components/FeaturedListingsitem";
 import GridFullWidth from "../src/components/GridFullWidth";
 
 export default function Home({ gridfullwidth }) {
