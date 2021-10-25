@@ -82,29 +82,32 @@ function GridFullWidth(props) {
         <p className={cn("text-sm text-gray-500 ")}>{props.location}</p>
         <div className={cn("flex pt-2 ")}>
           <div className={cn("flex-shrink ")}>
-            <p className={cn("text-center ")}>{props.numberOfBedroom}</p>
+            {/* <p className={cn("text-center ")}>{props.numberOfBedroom}</p> */}
           </div>
           <div className={cn("flex-shrink border-r-2 pl-1 pt-1 pr-2")}>
             <p>
-              <MdOutlineBedroomChild />
+              <span className={cn("pr-1")}>{props.numberOfBedroom}</span>
+              <MdOutlineBedroomChild className={cn("inline")} />
             </p>
             <p className={cn("mr-1")}>{props.bedrooms}</p>
           </div>
           <div className={cn("flex-shrink pl-2 ")}>
-            <p>{props.numberOfBathroom}</p>
+            {/* <p>{props.numberOfBathroom}</p> */}
           </div>
           <div className={cn("flex-shrink border-r-2 pl-1 pt-1 pr-2")}>
             <p>
-              <MdOutlineBathroom />
+              <span className={cn("pr-1")}>{props.numberOfBathroom}</span>
+              <MdOutlineBathroom className={cn("inline")} />
             </p>
             <p className={cn("mr-1")}>{props.bathroom}</p>
           </div>
           <div className={cn("flex-shrink pl-2")}>
-            <p>{props.spaceMeters}</p>
+            {/* <p>{props.spaceMeters}</p> */}
           </div>
           <div className={cn("flex-shrink pl-1 pt-1")}>
             <p>
-              <MdRoofing />
+              <span className={cn("pr-1")}>{props.spaceMeters}</span>
+              <MdRoofing className={cn("inline")} />
             </p>
             <p className={cn("mr-1")}>{props.space}</p>
           </div>
