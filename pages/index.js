@@ -42,7 +42,11 @@ export default function Home({
             name=""
             id=""
           />
-          <p className={cn("text-gray-500 px-4 p-2 inline border-2 bg-white")}>
+          <p
+            className={cn(
+              "text-gray-500 px-4 p-2 inline border-t-2 border-b-2 border-r-2 bg-white"
+            )}
+          >
             Status
           </p>
           <p
