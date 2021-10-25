@@ -91,7 +91,7 @@ function Realestate(props) {
                     id=""
                     placeholder="First Name"
                     className={cn(
-                      "w-6/12 border-2 placeholder-gray-700 p-2 rounded"
+                      "w-6/12 border-b-2 border-l-2 border-t-2 placeholder-gray-700 p-2 rounded"
                     )}
                   />
                   <input
@@ -134,7 +134,7 @@ function Realestate(props) {
                     id=""
                     placeholder="Zip Code"
                     className={cn(
-                      "border-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
+                      "border-t-2 border-b-2 border-r-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                     )}
                   />
                 </div>
@@ -157,7 +157,7 @@ function Realestate(props) {
                     id=""
                     placeholder="Max Price"
                     className={cn(
-                      "border-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
+                      "border-t-2 border-b-2 border-l-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                     )}
                   />
                   <input
@@ -175,7 +175,7 @@ function Realestate(props) {
                     id=""
                     placeholder="Number of beds"
                     className={cn(
-                      "border-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
+                      "border-t-2 border-b-2 border-l-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                     )}
                   />
                   <input
