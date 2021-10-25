@@ -5,26 +5,27 @@ import Button from "./Button";
 
 function ContemporaryApartment(props) {
   return (
-    <div className={cn("bg-white w-5/12 relative p-6 rounded")}>
+    <div className = {cn("container mx-auto pt-80")}>
+    <div className={cn("bg-white w-3/12 relative p-6 rounded transform")}>
       <div className={cn("grid grid-cols-2")}>
         <div className={cn("col-span-1")}>
           <p>{props.title}</p>
         </div>
         <div className={cn("col-span-1")}>
-          <p className={cn("float-right")}>{props.title}</p>
+          <p className={cn("float-right font-bold text-lg")}>{props.price}</p>
         </div>
       </div>
-      <p>{props.description}</p>
+      <p className= {cn("text-gray-500 text-sm pb-2")}>{props.description}</p>
       <div className={cn("flex")}>
         <div className={cn("flex-shrink")}>
           <MdBed className={cn("inline")} />
           <p className={cn("inline")}>{props.MdBed}</p>
         </div>
-        <div className={cn("flex-shrink")}>
+        <div className={cn("flex-shrink pl-2")}>
           <MdOutlineWaterDrop className={cn("inline")} />
           <p className={cn("inline")}>{props.MdOutlineWaterDrop}</p>
         </div>
-        <div className={cn("flex-shrink")}>
+        <div className={cn("flex-shrink pl-2")}>
           <MdOutlineMap className={cn("inline")} />
           <p className={cn("inline")}>{props.MdOutlineMap}</p>
         </div>
@@ -38,6 +39,7 @@ function ContemporaryApartment(props) {
           buttonName={"Details"}
         />
       </div>
+    </div>
     </div>
   );
 }
