@@ -5,7 +5,7 @@ import Button from "./Button";
 
 function BlueNavbar(props) {
   return (
-    <div className={cn("bg-blue-900 py-2")}>
+    <div className={cn("bg-blue-900 py-1")}>
       <div className={cn("flex justify-center")}>
         <div className={cn(" flex justify-start items-center w-8/12 pl-6")}>
           <li
@@ -14,7 +14,12 @@ function BlueNavbar(props) {
             )}
           >
             <Link href="/">
-              <a href="/">Home</a>
+              <a
+                className={cn("border-r-2 p-4 border-blue-300 border-l-2")}
+                href="/"
+              >
+                Home
+              </a>
             </Link>
           </li>
           <li
@@ -23,7 +28,9 @@ function BlueNavbar(props) {
             )}
           >
             <Link href="/">
-              <a href="/">Properties</a>
+              <a className={cn("border-r-2 p-4 border-blue-300")} href="/">
+                Properties
+              </a>
             </Link>
           </li>
           <li
@@ -32,7 +39,9 @@ function BlueNavbar(props) {
             )}
           >
             <Link href="property">
-              <a href="/">Property</a>
+              <a className={cn("border-r-2 p-4 border-blue-300")} href="/">
+                Property
+              </a>
             </Link>
           </li>
           <li
@@ -41,7 +50,9 @@ function BlueNavbar(props) {
             )}
           >
             <Link href="/">
-              <a href="/">Realtor</a>
+              <a className={cn("border-r-2 p-4 border-blue-300")} href="/">
+                Realtor
+              </a>
             </Link>
           </li>
           <li
@@ -50,7 +61,9 @@ function BlueNavbar(props) {
             )}
           >
             <Link href="/">
-              <a href="/">Others</a>
+              <a className={cn("border-r-2 p-4 border-blue-300")} href="/">
+                Others
+              </a>
             </Link>
           </li>
           <li
@@ -59,7 +72,9 @@ function BlueNavbar(props) {
             )}
           >
             <Link href="/">
-              <a href="/">Contact</a>
+              <a className={cn("border-r-2 p-4 border-blue-300")} href="/">
+                Contact
+              </a>
             </Link>
           </li>
 
