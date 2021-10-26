@@ -17,8 +17,8 @@ function Realestate(props) {
   const [numberOfbaths, setNumberOfBaths] = useState("");
 
   const onInquiryChange = (e) => {
-    console.log(property);
     setProperty(e.target.value);
+    console.log(property);
   };
 
   const onInformationChange = (e) => {
