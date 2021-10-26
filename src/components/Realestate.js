@@ -67,6 +67,9 @@ function Realestate(props) {
                   name=""
                   id=""
                   placeholder="Select"
+                  onChange={(e) => {
+                    console.log(e.target.value);
+                  }}
                   className={cn(
                     " border-2 placeholder-gray-700 p-2 rounded w-full mb-1"
                   )}
@@ -74,15 +77,21 @@ function Realestate(props) {
               </div>
               <div className={cn("pt-2")}>
                 <label htmlFor="">information</label>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="I'm a"
-                  className={cn(
-                    "border-2 placeholder-gray-700 p-2 rounded w-full mb-1"
-                  )}
-                />
+
+                <form className="inline" action="">
+                  <select
+                    className={cn(
+                      "border-2 placeholder-gray-700 p-2 rounded w-full mb-1"
+                    )}
+                    name=""
+                    id=""
+                  >
+                    <option value="Select">i'm a</option>
+                    <option value="Select">Boy</option>
+                    <option value="Select">Girl</option>
+                    <option value="Select">Other</option>
+                  </select>
+                </form>
 
                 <div className={cn("pt-2")}>
                   <input
@@ -90,6 +99,9 @@ function Realestate(props) {
                     name=""
                     id=""
                     placeholder="First Name"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "w-6/12 border-b-2 border-l-2 border-t-2 placeholder-gray-700 p-2 rounded"
                     )}
@@ -99,6 +111,9 @@ function Realestate(props) {
                     name=""
                     id=""
                     placeholder="Last Name"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "w-6/12 border-2 placeholder-gray-700 p-2  rounded"
                     )}
@@ -110,6 +125,9 @@ function Realestate(props) {
                     name=""
                     id=""
                     placeholder="Email Address"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "w-full border-2 placeholder-gray-700 p-2 rounded"
                     )}
@@ -119,24 +137,35 @@ function Realestate(props) {
                   <div>
                     <label htmlFor="">Location</label>
                   </div>
-                  <input
-                    type="text"
-                    name=""
-                    id=""
-                    placeholder="Select City"
-                    className={cn(
-                      "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
-                    )}
-                  />
-                  <input
-                    type="text"
-                    name=""
-                    id=""
-                    placeholder="Zip Code"
-                    className={cn(
-                      "border-t-2 border-b-2 border-r-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
-                    )}
-                  />
+
+                  <form className="inline" action="">
+                    <select
+                      className={cn(
+                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                      )}
+                      name=""
+                      id=""
+                    >
+                      <option value="Select">Select</option>
+                      <option value="Select">Lebanon</option>
+                      <option value="Select">USA</option>
+                      <option value="Select">Canada</option>
+                    </select>
+                  </form>
+                  <form className="inline" action="">
+                    <select
+                      className={cn(
+                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                      )}
+                      name=""
+                      value=""
+                      id=""
+                    >
+                      <option value="">Zip Code</option>
+                      <option value="">06321</option>
+                      <option value="">789621</option>
+                    </select>
+                  </form>
                 </div>
                 <div className={cn("pt-2")}>
                   <div>
@@ -147,49 +176,122 @@ function Realestate(props) {
                     name=""
                     id=""
                     placeholder="Select type"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "border-2 p-2 placeholder-gray-700 rounded w-full mb-1"
                     )}
                   />
-                  <input
+                  {/* <input
                     type="text"
                     name=""
                     id=""
                     placeholder="Max Price"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "border-t-2 border-b-2 border-l-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                     )}
-                  />
-                  <input
+                  /> */}
+                  <form className="inline" action="">
+                    <select
+                      className={cn(
+                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                      )}
+                      name=""
+                      value=""
+                      id=""
+                    >
+                      <option value="">Min Price</option>
+                      <option value="">500$</option>
+                      <option value="">800$</option>
+                    </select>
+                  </form>
+
+                  <form className="inline" action="">
+                    <select
+                      className={cn(
+                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                      )}
+                      name=""
+                      value=""
+                      id=""
+                    >
+                      <option value="">Minimum Size (Sq Ft)</option>
+                      <option value="">2000m</option>
+                      <option value="">500m</option>
+                    </select>
+                  </form>
+
+                  {/* <input
                     type="text"
                     name=""
                     id=""
                     placeholder="Minimum Size(Sq Ft"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "border-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                     )}
-                  />
-                  <input
+                  /> */}
+                  {/* <input
                     type="text"
                     name=""
                     id=""
                     placeholder="Number of beds"
+                    onChange={() => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "border-t-2 border-b-2 border-l-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                     )}
-                  />
-                  <input
+                  /> */}
+                  <form className="inline" action="">
+                    <select
+                      className={cn(
+                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                      )}
+                      name=""
+                      value=""
+                      id=""
+                    >
+                      <option value="">Number of beds</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                    </select>
+                  </form>
+                  {/* <input
                     type="text"
                     name=""
                     id=""
                     placeholder="Number of baths"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
                     className={cn(
                       "border-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                     )}
-                  />
+                  /> */}
+                  <form className="inline" action="">
+                    <select
+                      className={cn(
+                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                      )}
+                      name=""
+                      value=""
+                      id=""
+                    >
+                      <option value="">Number of baths</option>
+                      <option value="">4</option>
+                      <option value="">3</option>
+                    </select>
+                  </form>
                 </div>
               </div>
-              <div className={cn("pt-4 pb-2")}>
+              <div onClick={() => console.log("")} className={cn("pt-4 pb-2")}>
                 <Button
                   className={cn(
                     "bg-blue-600 text-white text-sm p-4 w-full rounded text-center"
