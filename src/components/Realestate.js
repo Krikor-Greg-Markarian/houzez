@@ -141,7 +141,7 @@ function Realestate(props) {
                   <form className="inline" action="">
                     <select
                       className={cn(
-                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                        "border-t-2 border-b-2 border-l-2 w-6/12 placeholder-gray-700 p-2 rounded"
                       )}
                       name=""
                       id=""
@@ -198,7 +198,7 @@ function Realestate(props) {
                   <form className="inline" action="">
                     <select
                       className={cn(
-                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                        "border-t-2 border-b-2 border-l-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                       )}
                       name=""
                       value=""
@@ -252,7 +252,7 @@ function Realestate(props) {
                   <form className="inline" action="">
                     <select
                       className={cn(
-                        "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                        "border-t-2 border-b-2 border-l-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                       )}
                       name=""
                       value=""
