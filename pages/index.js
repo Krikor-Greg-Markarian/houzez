@@ -117,6 +117,12 @@ export default function Home({
           <p className={cn("text-gray-500 pt-4 text-center")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
+
+          <div className={cn("flex justify-center items-center space-x-4")}>
+            <div className={cn("bg-blue-300")}>1</div>
+            <div className={cn("bg-blue-700")}>2</div>
+            <div className={cn("bg-blue-900")}>3</div>
+          </div>
         </div>
 
         <HouseRentBuySwiper featuredListingsItems={featuredListingsItems} />
