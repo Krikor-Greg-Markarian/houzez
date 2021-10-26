@@ -10,6 +10,8 @@ import Agent from "../src/components/Agent";
 import Realestate from "../src/components/Realestate";
 import HouseRentBuySwiper from "../src/components/HouseRentBuySwiper";
 import LifeStyle from "../src/components/LifeStyle";
+import { useState } from "react";
+import ReactDOM from "react-dom";
 
 export default function Home({
   houzez,
@@ -18,6 +20,8 @@ export default function Home({
   featuredListingsItems,
   lifestyle,
 }) {
+  const [name, setName] = useState("");
+
   return (
     <div className={cn("bg-white")}>
       <section>
@@ -193,6 +197,7 @@ export default function Home({
           <p className={cn("text-gray-500 pt-4 text-center")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
+
           <div className={cn("flex justify-center items-center py-24")}>
             <div className={cn("grid md:grid-cols-4 gap-4")}>
               {cities.map((item, idx) => (
