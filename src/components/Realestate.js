@@ -66,16 +66,15 @@ function Realestate(props) {
     console.log(minSpace);
   };
 
-  const onNumberOfBeds = (e)=>{
+  const onNumberOfBeds = (e) => {
     setNumberOfBeds(e.target.value);
     console.log(numberOfBeds);
-  }
-  
-  const onNumberOfBaths =(e)=>{
+  };
+
+  const onNumberOfBaths = (e) => {
     setNumberOfBaths(e.target.value);
     console.log(numberOfbaths);
-  }
-
+  };
 
   return (
     <div className={cn("blueOpacityBackground bg-fixed")}>
@@ -232,7 +231,6 @@ function Realestate(props) {
                         "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
                       )}
                       name=""
-                    
                       id=""
                       value={zipCode}
                       onChange={onZipCode}
@@ -265,7 +263,6 @@ function Realestate(props) {
                         "border-t-2 border-b-2 border-l-2 p-2 placeholder-gray-700 rounded w-6/12 mb-1"
                       )}
                       name=""
-                      
                       id=""
                       value={minPrice}
                       onChange={onMinPrice}
@@ -282,12 +279,13 @@ function Realestate(props) {
                         "border-2 w-6/12 placeholder-gray-700 p-2 rounded"
                       )}
                       name=""
-                      
                       id=""
                       value={minSpace}
                       onChange={onMinSpace}
                     >
-                      <option value="Minimum Size (Sq Ft)">Minimum Size (Sq Ft)</option>
+                      <option value="Minimum Size (Sq Ft)">
+                        Minimum Size (Sq Ft)
+                      </option>
                       <option value="2000M">2000m</option>
                       <option value="500M">500m</option>
                     </select>
@@ -327,7 +325,7 @@ function Realestate(props) {
                 </div>
               </div>
               <div
-                onClick={() => console.log(inquiry)}
+                onClick={() => console.log(data)}
                 className={cn("pt-4 pb-2")}
               >
                 <Button
