@@ -17,63 +17,94 @@ function Realestate(props) {
   const [numberOfbaths, setNumberOfBaths] = useState("");
 
   const onInquiryChange = (e) => {
-    setProperty(e.target.value);
-    console.log(property);
+    const tmp = e.target.value;
+    setInquiry(tmp);
+    console.log(tmp);
   };
 
   const onInformationChange = (e) => {
-    setInformation(e.target.value);
-    console.log(information);
+    const tmp = e.target.value;
+    setInformation(tmp);
+    console.log(tmp);
   };
 
   const onFirstName = (e) => {
-    setFirstName(e.target.value);
-    console.log(firstName);
+    const tmp = e.target.value;
+    setFirstName(tmp);
+    console.log(tmp);
   };
 
   const onLastName = (e) => {
-    setLastName(e.target.value);
-    console.log(lastName);
+    const tmp = e.target.value;
+    setLastName(tmp);
+    console.log(tmp);
   };
 
   const onEmailAddress = (e) => {
-    setEmailAddress(e.target.value);
-    console.log(emailAddress);
+    const tmp = e.target.value;
+    setEmailAddress(tmp);
+    console.log(tmp);
   };
 
   const onProperty = (e) => {
-    setProperty(e.target.value);
-    console.log(property);
+    const tmp = e.target.value;
+    setProperty(tmp);
+    console.log(tmp);
   };
 
   const onLocation = (e) => {
-    setLocation(e.target.value);
-    console.log(location);
+    const tmp = e.target.value;
+    setLocation(tmp);
+    console.log(tmp);
   };
 
   const onZipCode = (e) => {
-    setZipCode(e.target.value);
-    console.log(zipCode);
+    const tmp = e.target.value;
+    setZipCode(tmp);
+    console.log(tmp);
   };
 
   const onMinPrice = (e) => {
-    setMinPrice(e.target.value);
-    console.log(minPrice);
+    const tmp = e.target.value;
+    setMinPrice(tmp);
+    console.log(tmp);
   };
 
   const onMinSpace = (e) => {
-    setMinSpace(e.target.value);
-    console.log(minSpace);
+    const tmp = e.target.value;
+    setMinSpace(tmp);
+    console.log(tmp);
   };
 
   const onNumberOfBeds = (e) => {
-    setNumberOfBeds(e.target.value);
-    console.log(numberOfBeds);
+    const tmp = e.target.value;
+    setNumberOfBeds(tmp);
+    console.log(tmp);
   };
 
   const onNumberOfBaths = (e) => {
-    setNumberOfBaths(e.target.value);
-    console.log(numberOfbaths);
+    const tmp = e.target.value;
+    setNumberOfBaths(tmp);
+    console.log(tmp);
+  };
+
+  const onSubmit = () => {
+    const data = {
+      inquiry,
+      information,
+      firstName,
+      lastName,
+      emailAddress,
+      location,
+      zipCode,
+      property,
+      minPrice,
+      minSpace,
+      numberOfBeds,
+      numberOfbaths,
+    };
+    // code here
+    console.log(data);
   };
 
   return (
@@ -324,10 +355,7 @@ function Realestate(props) {
                   </form>
                 </div>
               </div>
-              <div
-                onClick={() => console.log(data)}
-                className={cn("pt-4 pb-2")}
-              >
+              <div onClick={onSubmit} className={cn("pt-4 pb-2")}>
                 <Button
                   className={cn(
                     "bg-blue-600 text-white text-sm p-4 w-full rounded text-center"
