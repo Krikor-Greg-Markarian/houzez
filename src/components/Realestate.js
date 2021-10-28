@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import Button from "./Button";
+import { FaSpinner } from "react-icons/fa";
 
 function Realestate(props) {
   const [inquiry, setInquiry] = useState("");
@@ -15,6 +16,9 @@ function Realestate(props) {
   const [minSpace, setMinSpace] = useState("");
   const [numberOfBeds, setNumberOfBeds] = useState("");
   const [numberOfbaths, setNumberOfBaths] = useState("");
+  const [disable, setDisable] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isred, setIsred] = useState(false);
 
   const onInquiryChange = (e) => {
     const tmp = e.target.value;
@@ -89,6 +93,34 @@ function Realestate(props) {
   };
 
   const onSubmit = () => {
+    setDisable(true);
+    setLoading(true);
+    // textInput.map((item, idx) =>
+    // {
+    //   if(item.trim() == "")
+    //   setIsred(true);
+    // })
+
+    if (inquiry.trim() == "") {
+      setIsred(true);
+    }
+
+    if (firstName.trim() == "") {
+      setIsred(true);
+    }
+
+    if (lastName.trim() == "") {
+      setIsred(true);
+    }
+
+    if (emailAddress.trim() == "") {
+      setIsred(true);
+    }
+
+    if (location.trim() == "Select") {
+      setIsred(true);
+    }
+
     const data = {
       inquiry,
       information,
@@ -102,9 +134,12 @@ function Realestate(props) {
       minSpace,
       numberOfBeds,
       numberOfbaths,
+      textInput: { inquiry, firstName },
     };
     // code here
-    console.log(data);
+    // console.log(data);
+    // setDisable(false);
+    // setLoading(false);
   };
 
   return (
@@ -173,7 +208,8 @@ function Realestate(props) {
                   value={inquiry}
                   onChange={onInquiryChange}
                   className={cn(
-                    " border-2 placeholder-gray-700 p-2 rounded w-full mb-1"
+                    " border-2 placeholder-gray-700 p-2 rounded w-full mb-1",
+                    { "border-red-300": isred }
                   )}
                 />
               </div>
@@ -207,7 +243,8 @@ function Realestate(props) {
                     value={firstName}
                     onChange={onFirstName}
                     className={cn(
-                      "w-6/12 border-b-2 border-l-2 border-t-2 placeholder-gray-700 p-2 rounded"
+                      "w-6/12 border-b-2 border-l-2 border-t-2 placeholder-gray-700 p-2 rounded",
+                      { "border-red-300": isred }
                     )}
                   />
                   <input
@@ -218,7 +255,8 @@ function Realestate(props) {
                     value={lastName}
                     onChange={onLastName}
                     className={cn(
-                      "w-6/12 border-2 placeholder-gray-700 p-2  rounded"
+                      "w-6/12 border-2 placeholder-gray-700 p-2  rounded",
+                      { "border-red-300": isred }
                     )}
                   />
                 </div>
@@ -231,7 +269,8 @@ function Realestate(props) {
                     placeholder="Email Address"
                     onChange={onEmailAddress}
                     className={cn(
-                      "w-full border-2 placeholder-gray-700 p-2 rounded"
+                      "w-full border-2 placeholder-gray-700 p-2 rounded",
+                      { "border-red-300": isred }
                     )}
                   />
                 </div>
@@ -243,7 +282,8 @@ function Realestate(props) {
                   <form className="inline" action="">
                     <select
                       className={cn(
-                        "border-t-2 border-b-2 border-l-2 w-6/12 placeholder-gray-700 p-2 rounded"
+                        "border-t-2 border-b-2 border-l-2 w-6/12 placeholder-gray-700 p-2 rounded",
+                        { "border-red-300": isred }
                       )}
                       name=""
                       id=""
@@ -284,7 +324,8 @@ function Realestate(props) {
                     placeholder="Select type"
                     onChange={onProperty}
                     className={cn(
-                      "border-2 p-2 placeholder-gray-700 rounded w-full mb-1"
+                      "border-2 p-2 placeholder-gray-700 rounded w-full mb-1",
+                      { "border-red-300": isred }
                     )}
                   />
 
@@ -355,12 +396,15 @@ function Realestate(props) {
                   </form>
                 </div>
               </div>
-              <div onClick={onSubmit} className={cn("pt-4 pb-2")}>
+              <div className={cn("pt-4 pb-2")}>
                 <Button
+                  disabled={disable}
+                  isLoading={loading}
+                  onClick={onSubmit}
                   className={cn(
                     "bg-blue-600 text-white text-sm p-4 w-full rounded text-center"
                   )}
-                  buttonName={"Submit"}
+                  buttonName={""}
                 />
               </div>
             </div>
